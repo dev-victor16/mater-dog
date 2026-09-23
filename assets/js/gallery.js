@@ -3,7 +3,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  const galleryItems = document.querySelectorAll('.gallery-item');
+  const galleryItems = document.querySelectorAll('.gallery-photo-card, .gallery-item');
   const lightboxModal = document.getElementById('gallery-lightbox');
   const lightboxImg = lightboxModal ? lightboxModal.querySelector('.lightbox-img') : null;
   const lightboxCaption = lightboxModal ? lightboxModal.querySelector('.lightbox-caption') : null;
@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
   galleryItems.forEach(item => {
     item.addEventListener('click', () => {
       const img = item.querySelector('img');
-      const title = item.querySelector('.gallery-title');
-      const subtitle = item.querySelector('.gallery-subtitle');
-      const captionText = title ? `${title.textContent} — ${subtitle ? subtitle.textContent : ''}` : '';
+      const title = item.querySelector('.gallery-photo-title, .gallery-title');
+      const desc = item.querySelector('.gallery-photo-desc, .gallery-subtitle');
+      const captionText = title ? `${title.textContent}${desc ? ' — ' + desc.textContent : ''}` : '';
 
       if (img) {
         openLightbox(img.src, captionText);

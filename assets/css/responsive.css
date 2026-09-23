@@ -1,9 +1,8 @@
 /* ==========================================================================
-   MATER DOG — RESPONSIVIDADE E OTIMIZAÇÕES MOBILE
-   Ergonomia para toque, leitura confortável e transições fluidas
+   MATER DOG — RESPONSIVIDADE E OTIMIZAÇÕES MOBILE (EDITORIAL)
    ========================================================================== */
 
-/* Telas Médias e Tablets em Paisagem (<= 1024px) */
+/* Tablets em Paisagem (<= 1024px) */
 @media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr 1fr;
@@ -15,14 +14,25 @@
     gap: var(--space-40);
   }
 
-  .emergency-grid {
+  .emergency-container {
     grid-template-columns: 1fr;
     gap: var(--space-32);
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-32);
+  .services-editorial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-visual-column {
+    position: static;
+  }
+
+  .reviews-editorial-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-meta-box {
+    position: static;
   }
 }
 
@@ -32,7 +42,7 @@
     display: none;
   }
 
-  .header-actions .btn-secondary {
+  .header-actions .header-phone-btn {
     display: none;
   }
 
@@ -42,69 +52,48 @@
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-40);
+    gap: var(--space-32);
   }
 
-  .hero-image-wrapper {
+  .hero-image-frame {
     aspect-ratio: 16 / 11;
-  }
-
-  .hero-float-card {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    margin-top: var(--space-16);
-    max-width: 100%;
   }
 
   .about-grid {
     grid-template-columns: 1fr;
   }
 
-  .service-row, .service-row.reverse {
-    grid-template-columns: 1fr;
-    gap: var(--space-24);
-  }
-
-  .service-row.reverse .service-image-col {
-    order: 1;
-  }
-
-  .service-row.reverse .service-content-col {
-    order: 2;
-  }
-
-  .gallery-mosaic-grid {
+  .gallery-editorial-grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  .gallery-item-1, .gallery-item-2, .gallery-item-3, .gallery-item-4, .gallery-item-5 {
+  .gallery-span-7, .gallery-span-5, .gallery-span-4 {
     grid-column: span 1;
     height: 240px;
   }
 
-  .gallery-item-1 {
+  .gallery-span-7 {
     grid-column: span 2;
     height: 280px;
   }
 
-  .contact-grid {
+  .contact-layout {
     grid-template-columns: 1fr;
   }
 
-  .map-container {
-    min-height: 320px;
+  .map-frame {
+    min-height: 300px;
   }
 }
 
 /* Smartphones (<= 640px) */
 @media (max-width: 640px) {
   body {
-    padding-bottom: 72px; /* Espaço para a barra fixa inferior */
+    padding-bottom: 68px; /* Espaço para a barra fixa inferior */
   }
 
   .top-notice-bar {
-    display: none; /* Mantém o foco no header limpo no mobile */
+    display: none;
   }
 
   .hero-actions {
@@ -116,40 +105,33 @@
     width: 100%;
   }
 
-  .situations-list {
+  .gallery-editorial-grid {
     grid-template-columns: 1fr;
   }
 
-  .service-checklist {
-    grid-template-columns: 1fr;
-  }
-
-  .about-pillars {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-mosaic-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-item-1, .gallery-item-2, .gallery-item-3, .gallery-item-4, .gallery-item-5 {
+  .gallery-span-7, .gallery-span-5, .gallery-span-4 {
     grid-column: span 1;
     height: 220px;
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr;
+  .footer-content {
+    flex-direction: column;
+    gap: var(--space-20);
   }
 
-  /* Barra de Ação Rápida no Rodapé do Celular */
+  .footer-nav {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
   .mobile-bottom-bar {
     display: block;
   }
 
   .floating-whatsapp {
-    bottom: 84px; /* Eleva para não colidir com a barra fixa */
-    right: 18px;
-    width: 52px;
-    height: 52px;
+    bottom: 80px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
   }
 }

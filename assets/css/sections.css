@@ -6,9 +6,15 @@
 /* --- HERO SECTION --- */
 .hero-section {
   position: relative;
-  padding-top: clamp(var(--space-40), 5vw, var(--space-64));
-  padding-bottom: clamp(var(--space-48), 6vw, var(--space-80));
+  padding-top: clamp(var(--space-48), 6vw, var(--space-80));
+  padding-bottom: clamp(var(--space-48), 7vw, var(--space-96));
   background-color: var(--bg-surface);
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.91) 48%, rgba(255, 255, 255, 0.6) 75%, rgba(255, 255, 255, 0.3) 100%),
+    url('../images/hero-bg-desktop.jpg');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
   border-bottom: 1px solid var(--border-subtle);
 }
 

@@ -38,6 +38,13 @@
 
 /* Tablets em Retrato e Smartphones Grandes (<= 860px) */
 @media (max-width: 860px) {
+  .hero-section {
+    background-image: 
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.92) 50%, rgba(255, 255, 255, 0.65) 100%),
+      url('../images/hero-bg-mobile.jpg');
+    background-position: center top;
+  }
+
   .nav-desktop {
     display: none;
   }

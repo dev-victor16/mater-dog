@@ -1,0 +1,155 @@
+/* ==========================================================================
+   MATER DOG — RESPONSIVIDADE E OTIMIZAÇÕES MOBILE
+   Ergonomia para toque, leitura confortável e transições fluidas
+   ========================================================================== */
+
+/* Telas Médias e Tablets em Paisagem (<= 1024px) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-32);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-40);
+  }
+
+  .emergency-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-32);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-32);
+  }
+}
+
+/* Tablets em Retrato e Smartphones Grandes (<= 860px) */
+@media (max-width: 860px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .header-actions .btn-secondary {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-40);
+  }
+
+  .hero-image-wrapper {
+    aspect-ratio: 16 / 11;
+  }
+
+  .hero-float-card {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: var(--space-16);
+    max-width: 100%;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-row, .service-row.reverse {
+    grid-template-columns: 1fr;
+    gap: var(--space-24);
+  }
+
+  .service-row.reverse .service-image-col {
+    order: 1;
+  }
+
+  .service-row.reverse .service-content-col {
+    order: 2;
+  }
+
+  .gallery-mosaic-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-item-1, .gallery-item-2, .gallery-item-3, .gallery-item-4, .gallery-item-5 {
+    grid-column: span 1;
+    height: 240px;
+  }
+
+  .gallery-item-1 {
+    grid-column: span 2;
+    height: 280px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .map-container {
+    min-height: 320px;
+  }
+}
+
+/* Smartphones (<= 640px) */
+@media (max-width: 640px) {
+  body {
+    padding-bottom: 72px; /* Espaço para a barra fixa inferior */
+  }
+
+  .top-notice-bar {
+    display: none; /* Mantém o foco no header limpo no mobile */
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .situations-list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-checklist {
+    grid-template-columns: 1fr;
+  }
+
+  .about-pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-mosaic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item-1, .gallery-item-2, .gallery-item-3, .gallery-item-4, .gallery-item-5 {
+    grid-column: span 1;
+    height: 220px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Barra de Ação Rápida no Rodapé do Celular */
+  .mobile-bottom-bar {
+    display: block;
+  }
+
+  .floating-whatsapp {
+    bottom: 84px; /* Eleva para não colidir com a barra fixa */
+    right: 18px;
+    width: 52px;
+    height: 52px;
+  }
+}

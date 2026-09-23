@@ -251,13 +251,18 @@
 }
 
 .brand-emblem {
-  width: 46px;
-  height: 46px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--brand-primary-light);
-  box-shadow: 0 2px 8px rgba(0, 158, 140, 0.2);
-  transition: transform var(--transition-normal);
+  box-shadow: 0 2px 10px rgba(0, 158, 140, 0.22);
+  transition: transform var(--transition-normal), width var(--transition-normal), height var(--transition-normal);
+}
+
+.site-header.is-scrolled .brand-emblem {
+  width: 44px;
+  height: 44px;
 }
 
 .brand-wrapper:hover .brand-emblem {
